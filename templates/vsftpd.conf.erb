@@ -201,6 +201,7 @@ banner_file=<%= @banner_file %>
 <% if @allow_writeable_chroot -%>
 allow_writeable_chroot=<%= @allow_writeable_chroot %>
 <% end -%>
-<% @directives.reject {|key,value| value == :undef}.sort_by {|key,value| key}.each do |key,value| -%>
-<%= key %>=<%= value %>
-<% end -%>
+<% if @directives.empty? == false -%>
+<% @directives.each do |key, val| -%>
+<%= key%> = <%= val%>
+<%end -%>
