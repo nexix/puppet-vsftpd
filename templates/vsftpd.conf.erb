@@ -203,6 +203,6 @@ allow_writeable_chroot=<%= @allow_writeable_chroot %>
 <% end -%>
 <% if @directives.empty? == false -%>
 <% @directives.each do |key, val| -%>
-<%= key%> = <%= val%>
+<%= key%>=<%= val%>
 <% end -%>
 <% end -%>
